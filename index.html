@@ -182,6 +182,16 @@
 						}
 
 						$("#totalScore").html(`Total Score: ${score}`);
+
+						if(score > 80)
+						{
+							$("#comment").html("Good Job!");
+						}
+						else
+						{
+							$("#comment").html("Failure runs in your veins.");
+						}
+
 						$("#totalAttempts").html(`Total Attempts: ${++attempts}`);
 						localStorage.setItem("total_attempts", attempts);
 					}
@@ -286,6 +296,7 @@
 		<hr>
 		<!-- Submit -->
 		<button class="btn btn-outline-success">Submit Quiz</button>
+		<h3 id="comment" class="text-info"></h3>
 		<h2 id="totalScore" class="text-info"></h2>
 		<h3 id="totalAttempts"></h3>
 		</div>
