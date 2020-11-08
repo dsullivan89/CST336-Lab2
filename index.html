@@ -186,10 +186,12 @@
 						if(score > 80)
 						{
 							$("#comment").html("Good Job!");
+							$("#totalScore").css("color", "green");
 						}
 						else
 						{
 							$("#comment").html("Failure runs in your veins.");
+							$("#totalScore").css("color", "red");
 						}
 
 						$("#totalAttempts").html(`Total Attempts: ${++attempts}`);
@@ -297,7 +299,7 @@
 		<!-- Submit -->
 		<button class="btn btn-outline-success">Submit Quiz</button>
 		<h3 id="comment" class="text-info"></h3>
-		<h2 id="totalScore" class="text-info"></h2>
+		<h2 id="totalScore"></h2>
 		<h3 id="totalAttempts"></h3>
 		</div>
 	</body>
